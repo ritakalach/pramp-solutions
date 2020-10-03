@@ -21,3 +21,21 @@ output: 1.913
 input:  x = 9, n = 2
 output: 3
 """
+
+def root(x, n):
+  left = 0
+  right = max()
+  approx= (left+right)/2.0;
+  
+  while (approx-left>=0.001):
+    
+    if approx ** n > x:
+      right = approx 
+    elif approx ** n < x:
+      left = approx
+    else:
+      break
+      
+    approx = (left + right) / 2.0
+    
+  return approx
