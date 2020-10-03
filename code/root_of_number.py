@@ -37,20 +37,3 @@ def root(x, n):
       break
       
   return mid
-
-
-# better variable names
-def root(x, n):
-  lower = 0
-  upper = max(1, x)
-  
-  while upper - lower >= 0.001:
-    approx = (lower + upper) / 2.0    
-    if approx ** n > x:
-      upper = approx 
-    elif approx ** n < x:
-      lower = approx
-    else: # exact root
-      break
-      
-  return approx
