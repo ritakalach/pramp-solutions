@@ -22,7 +22,6 @@ input:  x = 9, n = 2
 output: 3
 """
 
-
 def root(x, n):
   left = 0
   right = max(1, x)
@@ -33,7 +32,7 @@ def root(x, n):
       right = mid
     elif mid ** n < x:
       left = mid
-    else: # exact case
+    else: # exact root
       break
       
   return mid
