@@ -23,19 +23,19 @@ output: 3
 """
 
 def root(x, n):
-  left = 0
-  right = max()
-  approx= (left+right)/2.0;
+  lower = 0
+  upper = max(1, x)
+  approx = (lower + upper) / 2.0
   
-  while (approx-left>=0.001):
+  while approx - lower >= 0.001:
     
     if approx ** n > x:
-      right = approx 
+      upper = approx 
     elif approx ** n < x:
-      left = approx
+      lower = approx
     else:
       break
       
-    approx = (left + right) / 2.0
+    approx = (lower + upper) / 2.0
     
   return approx
