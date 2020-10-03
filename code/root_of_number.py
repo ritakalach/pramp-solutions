@@ -22,6 +22,24 @@ input:  x = 9, n = 2
 output: 3
 """
 
+
+def root(x, n):
+  left = 0
+  right = max(1, x)
+  
+  while right - left >= 0.001:
+    mid = (left + right) / 2.0
+    if mid ** n > x:
+      right = mid
+    elif mid ** n < x:
+      left = mid
+    else: # exact case
+      break
+      
+  return mid
+
+
+# better variable names
 def root(x, n):
   lower = 0
   upper = max(1, x)
