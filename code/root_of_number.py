@@ -25,17 +25,14 @@ output: 3
 def root(x, n):
   lower = 0
   upper = max(1, x)
-  approx = (lower + upper) / 2.0
   
-  while approx - lower >= 0.001:
-    
+  while upper - lower >= 0.001:
+    approx = (lower + upper) / 2.0    
     if approx ** n > x:
       upper = approx 
     elif approx ** n < x:
       lower = approx
-    else:
+    else: # exact root
       break
       
-    approx = (lower + upper) / 2.0
-    
   return approx
