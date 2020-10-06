@@ -19,6 +19,8 @@ words = ["to"]
 output: -1
 """
 
+# O(n * m^2) time where n is the len(words) and m is the longest word
+# O(nm) space
 import string     
 from collections import deque 
 
