@@ -30,6 +30,8 @@ def find_array_quadruplet(arr, target):
   arr.sort()
   
   for i in range(n - 3):
+    if i != 0 and arr[i] == arr[i - 1]:
+      continue
     for j in range(i + 1, n - 2):
       curr_sum = arr[i] + arr[j]
       complement_sum = target - curr_sum
