@@ -22,28 +22,29 @@ output: [0, 4, 7, 9] # The ordered quadruplet of (7, 4, 0, 9)
 
 # O(n^3) time
 # O(1) space
-def find_array_quadruplet(arr, target):
-  n = len(arr)  
+def find_array_quadruplet(nums, target):
+  n = len(nums)  
   if n < 4:
     return []
   
-  arr.sort()
+  nums.sort()
   
   for i in range(n - 3):
-    if i != 0 and arr[i] == arr[i - 1]:
+    if i != 0 and nums[i] == nums[i - 1]:
       continue
     for j in range(i + 1, n - 2):
-      curr_sum = arr[i] + arr[j]
-      complement_sum = target - curr_sum
+      curr_sum = nums[i] + nums[j]
+      target_complement = target - curr_sum
       low = j + 1
       high = n - 1
       
       while low < high:
-        if complement_sum < arr[low] + arr[high]:
+        curr_complement = nums[low] + nums[high]
+        if curr_complement > target_complement:
           high -= 1
-        elif complement_sum > arr[low] + arr[high]:
+        elif curr_complement < target_complement:
           low += 1
         else:
-          return [arr[i], arr[j], arr[low], arr[high]]      
+          return [nums[i], nums[j], nums[low], nums[high]]      
           
   return []
