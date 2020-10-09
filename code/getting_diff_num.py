@@ -12,6 +12,7 @@ output: 1
 
 """
 
+
 # O(n)
 # O(n)
 def get_different_number(arr):
@@ -20,6 +21,24 @@ def get_different_number(arr):
   
   for i in range(n):
     if i not in arr_set:
+      return i
+    
+  return n
+
+
+# O(n)
+# O(1)
+def get_different_number(arr):
+  n = len(arr)
+  
+  for i in range(n):
+    curr = arr[i]
+    while curr != i and curr < n:
+      arr[i], arr[curr] = arr[curr], arr[i]
+      curr = arr[i]
+  
+  for i in range(n):
+    if arr[i] != i:
       return i
     
   return n
