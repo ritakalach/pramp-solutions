@@ -33,6 +33,8 @@ def find_array_quadruplet(nums, target):
     if i != 0 and nums[i] == nums[i - 1]:
       continue
     for j in range(i + 1, n - 2):
+      if j != 1 and nums[i] == nums[i - 1]:
+        continue
       curr_sum = nums[i] + nums[j]
       target_complement = target - curr_sum
       low = j + 1
