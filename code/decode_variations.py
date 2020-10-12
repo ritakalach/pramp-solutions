@@ -15,6 +15,25 @@ explanation: There are 3 messages that encode to '1262': 'AZB', 'ABFB', and 'LFB
 
 """
 
+# Recursive
+# only works if memo={} is passed
+"""
+def decodeVariations(S, i=0, count=0, memo={}):
+  print(S, i, count, memo)
+  if i == len(S):
+    return 1
+  if i in memo:
+    return memo[i]
+    
+  if 1 <= int(S[i]) <= 9:
+    count += decodeVariations(S, i+1, count, memo) 
+  if 10 <= int(S[i:i+2]) <= 26:
+    count += decodeVariations(S, i+2, count, memo)
+    
+  memo[i] = count
+  return count
+"""
+
 
 # Recursive
 # O(n), O(n)
@@ -35,6 +54,27 @@ def decodeVariations(S):
     
   memo = {}
   return dfs(0)
+
+
+# Recursive
+def decodeVariations(S):
+  return decode_variations_dfs(S, 0, {})
+
+def decode_variations_dfs(S, i, memo):
+  if i == len(S):
+    return 1
+  if i in memo:
+    return memo[i]
+  
+  count = 0
+  
+  if 1 <= int(S[i]) <= 9:
+    count += decode_variations_dfs(S, i+1, memo) 
+  if 10 <= int(S[i:i+2]) <= 26:
+    count += decode_variations_dfs(S, i+2, memo)
+    
+  memo[i] = count
+  return count
 
 
 # DP
