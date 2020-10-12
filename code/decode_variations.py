@@ -65,7 +65,7 @@ def decodeVariations(S):
   
   for i in range(1, len(S)):    
     if S[i] != "0":
-      dp[i] = dp[i - 1]
+      dp[i] += dp[i - 1]
     if 10 <= int(S[i-1:i+1]) <= 26:
       dp[i] += dp[i - 2] if i - 2 >= 0 else 1
   
