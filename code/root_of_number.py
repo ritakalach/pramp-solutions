@@ -36,6 +36,6 @@ def root(x, n):
     elif mid ** n > x:
       high = mid
     else: # mid ** n == x:
-      break
+      return mid
   
   return mid
