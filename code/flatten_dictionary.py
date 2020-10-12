@@ -29,15 +29,18 @@ output: {
         
 """        
 
+# O(n)
+# O(n)
 def flatten_dictionary(nested_dict):
   flat_dict = {}
   flat_dict_recurse(nested_dict, flat_dict)
   return flat_dict
 
-def flat_dict_recurse(nested_dict, flat_dict, key_path = ""):
+def flat_dict_recurse(nested_dict, flat_dict, path=""):
   for key, value in nested_dict.items():
-    include_dot = 1 if key_path and key else 0
+    include_dot = 1 if path and key else 0
+    key_path = path + "." * include_dot + key
     if not isinstance(value, dict):
-      flat_dict[key_path + "." * include_dot + key] = value
+      flat_dict[key_path] = value
     else:
-      flat_dict_recurse(value, flat_dict, key_path + "." * include_dot + key)
+      flat_dict_recurse(value, flat_dict, key_path)
