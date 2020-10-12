@@ -25,6 +25,9 @@ import string
 from collections import deque 
 
 def shortestWordEditPath(source, target, words):
+  if target not in words:
+    return -1
+  
   alphabet = string.ascii_lowercase
   words_set = set(words)
   queue = deque([(source, 0)])
@@ -36,9 +39,9 @@ def shortestWordEditPath(source, target, words):
       return depth
     for i in range(len(curr_word)):
       for char in alphabet:
-        potential_next_word = curr_word[:i] + char + curr_word[i+1:]
-        if potential_next_word in words_set and potential_next_word not in seen:
-          queue.append((potential_next_word, depth+1))
-          seen.add(potential_next_word)
+        next_word = curr_word[:i] + char + curr_word[i+1:]
+        if next_word in words_set and next_word not in seen:
+          queue.append((next_word, depth+1))
+          seen.add(next_word)
           
   return -1
