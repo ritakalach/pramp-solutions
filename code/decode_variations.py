@@ -93,4 +93,23 @@ def decodeVariations(S):
     
   return curr
 
+
+# Iterative
+def decodeVariations(S):
+  if not S or S[0] == "0":
+    return 0
+  
+  prev_prev = 1
+  prev = 1
+  
+  for i in range(1, len(S)):
+    curr = 0
+    if S[i] != "0":
+      curr += prev
+    if 10 <= int(S[i-1:i+1]) <= 26:
+      curr += prev_prev
+    prev_prev = prev
+    prev = curr
+    
+  return prev
         
