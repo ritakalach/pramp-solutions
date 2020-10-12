@@ -23,16 +23,19 @@ output: 3
 """
 
 def root(x, n):
-  left = 0
-  right = max(1, x)
-  
-  while right - left >= 0.001:
-    mid = (left + right) / 2.0
-    if mid ** n > x:
-      right = mid
-    elif mid ** n < x:
-      left = mid
-    else: # exact root
+  if n == 0:
+    raise ValueError("Can't take 0'th root of a number.")
+    
+  low = 0
+  high = max(1, x)
+
+  while high - low > 0.001:
+    mid = (low + high) / 2.0 
+    if mid ** n < x:
+      low = mid
+    elif mid ** n > x:
+      high = mid
+    else: # mid ** n == x:
       break
-      
+  
   return mid
