@@ -48,7 +48,6 @@ def decode_variations_dfs(S, i, memo):
     return memo[i]
   
   count = 0
-  
   if 1 <= int(S[i]) <= 9:
     count += decode_variations_dfs(S, i+1, memo) 
   if 10 <= int(S[i:i+2]) <= 26:
