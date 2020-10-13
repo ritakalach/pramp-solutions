@@ -24,14 +24,13 @@ def bracket_match(text):
   count_missing_opening = 0
   n = len(text)
   
-  for i in range(n):
-    if text[i] == "(":
+  for char in text:
+    if char == "(":
       count_missing_closing += 1
-    elif text[i] == ")":
-      count_missing_closing -= 1
-      
-    if count_missing_closing < 0:
-      count_missing_closing += 1
-      count_missing_opening += 1
+    elif char == ")":
+      count_missing_closing -= 1   
+      if count_missing_closing < 0:
+        count_missing_closing += 1
+        count_missing_opening += 1
       
   return count_missing_closing + count_missing_opening
