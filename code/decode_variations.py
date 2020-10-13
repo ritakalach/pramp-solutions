@@ -17,7 +17,8 @@ explanation: There are 3 messages that encode to '1262': 'AZB', 'ABFB', and 'LFB
 
 
 # Recursive
-# O(n), O(n)
+# O(n) time
+# O(n) space
 def decodeVariations(S):
   def dfs(i):
     if i == len(S):
@@ -37,7 +38,7 @@ def decodeVariations(S):
   return dfs(0)
 
 
-# Recursive
+# Also recursive (maybe cleaner)
 def decodeVariations(S):
   return decode_variations_dfs(S, 0, {})
 
@@ -72,7 +73,8 @@ def decodeVariations(S):
 
 
 # Iterative (DP)
-# O(n), O(1)
+# O(n) time
+# O(1) space
 def decodeVariations(S):
   if not S or S[0] == "0":
     return 0
