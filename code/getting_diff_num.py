@@ -10,8 +10,8 @@ input:  arr = [0, 2, 3]
 output: 1
 """
 
-# O(n)
-# O(n)
+# O(n) time
+# O(n) space
 def get_different_number(arr):
   n = len(arr)
   arr_set = set(arr)
@@ -22,8 +22,9 @@ def get_different_number(arr):
     
   return n
 
-# O(n)
-# O(1)
+
+# O(n) time
+# O(1) space
 def get_different_number(arr):
   n = len(arr)
   
