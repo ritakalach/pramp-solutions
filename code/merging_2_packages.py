@@ -14,7 +14,8 @@ output: [3, 1] # since these are the indices of the
                
 """
 
-# O(n), O(n)
+# O(n) time
+# O(n) space
 def get_indices_of_item_wights(arr, limit):
   if len(arr) < 2:
     return []
