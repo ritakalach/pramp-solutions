@@ -29,8 +29,8 @@ output: {
         
 """        
 
-# O(n)
-# O(n)
+# O(n) time, where n is the number of keys in the input dictionary
+# O(n) space
 def flatten_dictionary(nested_dict):
   flat_dict = {}
   flat_dict_recurse(nested_dict, flat_dict)
