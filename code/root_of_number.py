@@ -22,6 +22,8 @@ input:  x = 9, n = 2
 output: 3
 """
 
+# O(log(x)) time
+# O(1) space
 def root(x, n):
   if n == 0:
     raise ValueError("Can't take 0'th root of a number.")
