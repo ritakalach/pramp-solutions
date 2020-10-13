@@ -17,8 +17,8 @@ input:  text = “())(”
 output: 2
 """
 
-# O(n)
-# O(1)
+# O(n) time
+# O(1) space
 def bracket_match(text):
   count_missing_closing = 0
   count_missing_opening = 0
