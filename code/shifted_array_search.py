@@ -50,7 +50,7 @@ def shifted_arr_search(arr, num):
   n = len(arr)
   pivot = find_pivot(arr, 0, n - 1)
   
-  if pivot == 0 or num < arr[0]:
+  if pivot == 0 or arr[0] > num:
     return binary_search(arr, pivot, n - 1, num)
   
   return binary_search(arr, 0, pivot - 1, num)
@@ -59,7 +59,7 @@ def shifted_arr_search(arr, num):
 def find_pivot(arr, low, high):
   while low <= high:
     mid = low + (high - low) // 2
-    if mid == 0 or arr[mid] < arr[mid - 1]:
+    if mid == 0 or arr[mid - 1] > arr[mid]:
       return mid
     elif arr[mid] > arr[0]:
       low = mid + 1
@@ -71,7 +71,7 @@ def find_pivot(arr, low, high):
 
 def binary_search(arr, low, high, num):
   while low <= high:
-    mid = (low + high) // 2
+    mid = low + (high - low) // 2
     if arr[mid] == num:
       return mid
     elif arr[mid] < num:
