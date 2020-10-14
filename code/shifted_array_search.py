@@ -18,3 +18,65 @@ input:  shiftArr = [9, 12, 17, 2, 4, 5], num = 2 # shiftArr is the
 output: 3 # since it’s the index of 2 in arr
 """
 
+# one pass solution
+# O(logn) time
+# O(1) space
+def shifted_arr_search(arr, num):
+  low, high = 0, len(arr) - 1
+  
+  while low <= high:
+    mid = (low + high) // 2
+    # Case 0: we found the target num at index mid
+    if arr[mid] == num:
+      return mid
+    # Case 1: no pivot in low-mid range, nums are ordered
+    elif arr[low] <= [mid]:
+      if arr[low] <= num < arr[mid]:
+        high = mid - 1
+      else:
+        low = mid + 1
+    # Case 2: pivot in low-mid range, nums are unordered
+    else:
+      if arr[mid] < num <= arr[high]:
+        low = mid + 1
+      else:
+        high = mid - 1
+
+  return -1
+
+
+# two pass solution
+def shifted_arr_search(arr, num):
+  n = len(arr)
+  pivot = find_pivot(arr, 0, n - 1)
+  
+  if pivot == 0 or num < arr[0]:
+    return binary_search(arr, pivot, n - 1, num)
+  
+  return binary_search(arr, 0, pivot - 1, num)
+
+
+def find_pivot(arr, low, high):
+  while low <= high:
+    mid = low + (high - low) // 2
+    if mid == 0 or arr[mid] < arr[mid - 1]:
+      return mid
+    elif arr[mid] > arr[0]:
+      low = mid + 1
+    else:
+      high = mid - 1
+      
+  return 0
+
+
+def binary_search(arr, low, high, num):
+  while low <= high:
+    mid = (low + high) // 2
+    if arr[mid] == num:
+      return mid
+    elif arr[mid] < num:
+      low = mid + 1
+    else:
+      high = mid - 1
+      
+  return -1
