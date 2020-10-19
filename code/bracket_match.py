@@ -1,4 +1,6 @@
 """
+Bracket Match
+
 A string of brackets is considered correctly matched if every opening bracket in the string can be paired up with a later closing bracket, and vice versa. 
 For instance, “(())()” is correctly matched, whereas “)(“ and “((” aren’t. For instance, “((” could become correctly matched by adding two closing brackets 
 at the end, so you’d return 2.
