@@ -14,6 +14,9 @@ output: [1, 2, 3, 4, 5, 10, 15, 20, 19, 18, 17, 16, 11, 6, 7, 8, 9, 14, 13, 12]
 
 """
 
+# Simulation
+# O(mn) time
+# O(mn) space
 def spiral_copy(matrix):
   m, n = len(matrix), len(matrix[0])
   top, bottom = 0, m - 1 
@@ -42,5 +45,46 @@ def spiral_copy(matrix):
       for i in range(bottom, top - 1, -1):
         path.append(matrix[i][left])
       left += 1  
+    
+  return path
+
+
+# Layer-by-layer
+# O(mn) time
+# O(mn) space
+def copy_layer(matrix, top, bottom, left, right, path):
+  # Copy top row, going left to right.
+  for j in range(left, right + 1):
+    path.append(matrix[top][j])
+    
+  if top == bottom: # case where we don't have a right column to copy (like a matrix with only one row)
+    return
+  # Copy right column, going top to bottom.
+  for i in range(top + 1, bottom + 1):
+    path.append(matrix[i][right])
+    
+  if right == left: # case where we don't have a bottom row to copy (like a matrix with only one column)
+    return 
+  # Copy bottom row, going right to left.
+  for j in range(right - 1, left - 1, -1):
+    path.append(matrix[bottom][j])
+  
+  # Copy left column, going bottom to top.
+  for i in range(bottom - 1, top, -1):
+    path.append(matrix[i][left])
+  
+def spiral_copy(matrix):
+  m, n = len(matrix), len(matrix[0])
+  top, bottom = 0, m - 1 
+  left, right = 0, n - 1
+  path = []
+  
+  while top <= bottom and left <= right:
+    copy_layer(matrix, top, bottom, left, right, path)
+    # Move edges to next layer
+    top += 1
+    bottom -= 1
+    left += 1
+    right -= 1
     
   return path
