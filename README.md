@@ -3,15 +3,15 @@
 
 ### Array and Strings
 * [Bracket Match](code/bracket_match.py)
-* [Drone Flight Planner](code/drone_flight_planner.py)
+* [Drone Flight Planner](code/drone_flight_planner.py) ✈️
 * [Array Index & Element Equality](code/arr_i_and_element_equality.py)
 * [Getting a Different Number](code/getting_diff_num.py)
-* [Merging 2 Packages](code/merging_2_packages.py)
+* [Merging 2 Packages](code/merging_2_packages.py) 📦📦
 * [Pairs with Specific Difference](code/pairs_w_specific_diff.py)
 * [Toeplitz Matrix](code/toeplitz_matrix.py)
 * [Word Count Engine](code/word_count_engine.py)
-* [Time Planner](code/time_planner.py)
-* [Matrix Spiral Copy](code/matrix_spiral_copy.py)
+* [Time Planner](code/time_planner.py) ⏰📓
+* [Matrix Spiral Copy](code/matrix_spiral_copy.py) 🌀
 * [Minimum Window Substring](smallest_substr_all_chars.py)
 * [Array Quadruplet](code/array_quadruplet.py)
 
