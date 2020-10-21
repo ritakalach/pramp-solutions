@@ -51,3 +51,30 @@ def index_equals_value_search(arr):
       high = mid - 1
     
   return -1
+
+
+def binary_search(arr):
+  low = 0
+  high = len(arr) - 1 
+  
+  while low <= high: 
+    mid = low + (high - low) // 2
+    if arr[mid] == mid:
+      return mid
+    elif arr[mid] < mid:
+      low = mid + 1
+    else: 
+      high = mid - 1
+      
+  return -1
+      
+def index_equals_value_search(arr):
+  low = 0
+  high = len(arr) - 1 
+  
+  ans = binary_search(arr)      
+  # check if the previous index also equals its element
+  while ans > 0 and arr[ans - 1] == ans - 1:
+    ans -= 1
+    
+  return ans
