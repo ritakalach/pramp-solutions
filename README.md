@@ -8,11 +8,12 @@
 * [Getting a Different Number](code/getting_diff_num.py)
 * [Merging 2 Packages](code/merging_2_packages.py)
 * [Pairs with Specific Difference](code/pairs_w_specific_diff.py)
+* [Toeplitz Matrix](code/toeplitz_matrix.py)
 * [Word Count Engine](code/word_count_engine.py)
+* [Time Planner](code/time_planner.py)
+* [Matrix Spiral Copy](code/matrix_spiral_copy.py)
 * [Minimum Window Substring](smallest_substr_all_chars.py)
 * [Array Quadruplet](code/array_quadruplet.py)
-* [Toeplitz Matrix](code/toeplitz_matrix.py)
-* [Matrix Spiral Copy](code/matrix_spiral_copy.py)
 
 ### Trees and Graphs
 * [Shortest Word Edit Path](code/shortest_word_edit_path.py)
