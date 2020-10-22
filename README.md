@@ -20,7 +20,7 @@
 
 ### Sorting and Searching
 * [Shifted Array Search](code/shifted_array_search.py)
-* [Pancake Sort](code/pancake_sort.py)
+* [Pancake Sort](code/pancake_sort.py) 🥞
 
 ### Recursion and DP
 * [Decode Variations](code/decode_variations.py)
