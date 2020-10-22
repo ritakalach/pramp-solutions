@@ -39,8 +39,8 @@ def flatten_dictionary(nested_dict):
 def flat_dict_recurse(nested_dict, flat_dict, path=""):
   for key, value in nested_dict.items():
     include_dot = 1 if path and key else 0
-    key_path = path + "." * include_dot + key
+    updated_path = path + "." * include_dot + key
     if not isinstance(value, dict):
-      flat_dict[key_path] = value
+      flat_dict[updated_path] = value
     else:
-      flat_dict_recurse(value, flat_dict, key_path)
+      flat_dict_recurse(value, flat_dict, updated_path)
