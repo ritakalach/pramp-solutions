@@ -17,6 +17,7 @@
 
 ### Trees and Graphs
 * [Shortest Word Edit Path](code/shortest_word_edit_path.py)
+* [Largest Smaller BST Key](code/largest_smaller_bst_key.py)
 
 ### Sorting and Searching
 * [Shifted Array Search](code/shifted_array_search.py)
