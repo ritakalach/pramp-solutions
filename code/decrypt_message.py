@@ -9,11 +9,11 @@ Every word is encrypted as follows:
 
 For instance, to encrypt the word “crime”
 
-Decrypted message:  c r i m e
+Decrypted message:  c   r   i   m   e
 Step 1:             99  114 105 109 101
 Step 2:            100  214 319 428 529
 Step 3:            100  110 111 116 113
-Encrypted message:  d n o t q
+Encrypted message:  d   n   o   t   q
 
 Write a function named decrypt(word) that receives a string that consists of small latin letters only, and returns the decrypted word.
 
