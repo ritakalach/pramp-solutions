@@ -9,7 +9,6 @@
 * [Getting a Different Number](code/getting_diff_num.py)
 * [Merging 2 Packages](code/merging_2_packages.py) 📦📦
 * [Pairs with Specific Difference](code/pairs_w_specific_diff.py)
-* [Decrypt Message](code/decrypt_message.py) ✉️
 * [Toeplitz Matrix](code/toeplitz_matrix.py)
 * [Word Count Engine](code/word_count_engine.py)
 * [Time Planner](code/time_planner.py) ⏰📓
@@ -32,4 +31,5 @@
 
 ### Math
 * [Root of Number](code/root_of_number.py)
+* [Decrypt Message](code/decrypt_message.py) ✉️
 
