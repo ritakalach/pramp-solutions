@@ -7,7 +7,6 @@ For example, "12.34.5.6", "0.23.25.0", and "255.255.255.255" are valid IP addres
 while "12.34.56.oops", "1.2.3.4.5", and "123.235.153.425" are invalid IP addresses.
 
 
-
 ip = '192.168.0.1'
 output: true
 
