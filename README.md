@@ -7,6 +7,7 @@
 * [Validate IP Address](code/validate_ip_address.py) 🌐📍 
 * [Array Index & Element Equality](code/arr_i_and_element_equality.py)
 * [Getting a Different Number](code/getting_diff_num.py)
+* [Sentence Reverse](code/sentence_reverse.py)
 * [Merging 2 Packages](code/merging_2_packages.py) 📦📦
 * [Pairs with Specific Difference](code/pairs_w_specific_diff.py)
 * [Toeplitz Matrix](code/toeplitz_matrix.py)
