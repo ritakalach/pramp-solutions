@@ -3,8 +3,10 @@
 
 ### Array and Strings
 * [Bracket Match](code/bracket_match.py)
+* [Find The Duplicates](code/find_duplicates.py)
 * [Drone Flight Planner](code/drone_flight_planner.py) ✈️
 * [Validate IP Address](code/validate_ip_address.py) 🌐📍 
+* [Busiest Time in The Mall](code/busiest_time_in_mall.py) ⌚🛍️
 * [Array Index & Element Equality](code/arr_i_and_element_equality.py)
 * [Getting a Different Number](code/getting_diff_num.py)
 * [Sentence Reverse](code/sentence_reverse.py)
