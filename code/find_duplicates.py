@@ -14,7 +14,7 @@ output: [3, 6, 7]
 ""
 
 # O(n + m) time
-# O(1) space
+# O(n) space
 def find_duplicates(arr1, arr2):
   duplicates = []
   
