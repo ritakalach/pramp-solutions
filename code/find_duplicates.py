@@ -13,6 +13,7 @@ output: [3, 6, 7]
 
 ""
 
+
 # O(n + m) time
 # O(n) space
 def find_duplicates(arr1, arr2):
@@ -32,3 +33,35 @@ def find_duplicates(arr1, arr2):
       j += 1
       
   return duplicates
+
+
+# O(mlogn) time where m = len(arr1) and n = len(arr2)
+# O(n) space
+def find_duplicates(arr1, arr2):
+  # Make arr1 the shorter array
+  if arr2 < arr1:
+    arr1, arr2 = arr2, arr1
+  duplicates = []
+  
+  # Traverse the shorter array 
+  for num in arr1:
+    if binary_search(arr2, num):
+      duplicates.append(num)
+      
+  return duplicates
+
+
+def binary_search(arr, num):
+  left = 0
+  right = len(arr) - 1
+  
+  while left <= right:
+    mid = (left + right) // 2
+    if arr[mid] < num:
+      left = mid + 1
+    elif arr[mid] > num:
+      right = mid - 1
+    else: # arr[mid] == num
+      return True
+    
+  return False
