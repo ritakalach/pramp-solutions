@@ -20,8 +20,9 @@
 * [Array Quadruplet](code/array_quadruplet.py)
 
 ### Trees and Graphs
-* [Shortest Word Edit Path](code/shortest_word_edit_path.py)
+* [Sales Path](code/sales_path.py)
 * [Largest Smaller BST Key](code/largest_smaller_bst_key.py)
+* [Shortest Word Edit Path](code/shortest_word_edit_path.py)
 
 ### Sorting and Searching
 * [Shifted Array Search](code/shifted_array_search.py)
