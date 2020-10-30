@@ -32,6 +32,7 @@
 ### Recursion and DP
 * [Decode Variations](code/decode_variations.py)
 * [Flatten a Dictionary](code/flatten_dictionary.py)
+* [Deletion Distance](code/deletion_distance.py)
 * [Basic Regex Parser](code/basic_regex_parser.py)
 
 ### Math
