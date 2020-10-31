@@ -35,7 +35,7 @@ def get_number_of_islands(binaryMatrix):
 def dfs(matrix, i, j, m, n):
   if i < 0 or i >= m or j < 0 or j >= n or matrix[i][j] != 1:
     return
-  matrix[i][j] = "#"
+  matrix[i][j] = -1
   dfs(matrix, i - 1, j, m, n)
   dfs(matrix, i + 1, j, m, n)
   dfs(matrix, i, j - 1, m, n)
@@ -51,19 +51,19 @@ def get_number_of_islands(binaryMatrix):
   for i in range(m):
     for j in range(n):
       if binaryMatrix[i][j] == 1:
-        dfs(binaryMatrix, i, j, m, n)
+        bfs(binaryMatrix, i, j, m, n)
         islands += 1
   return islands
 
-def dfs(matrix, x, y, m, n):
-  stack = [[x, y]]
-  while stack:
-    i, j = stack.pop()
+def bfs(matrix, x, y, m, n):
+  queue = [[x, y]]
+  while queue:
+    i, j = queue.pop()
     if i < 0 or i >= m or j < 0 or j >= n or matrix[i][j] != 1:
       continue
     else:
-      matrix[i][j] = "#"
-      stack.append([i - 1, j])
-      stack.append([i + 1, j])
-      stack.append([i, j - 1])
-      stack.append([i, j + 1])
+      matrix[i][j] = -1
+      queue.append([i - 1, j])
+      queue.append([i + 1, j])
+      queue.append([i, j - 1])
+      queue.append([i, j + 1])
