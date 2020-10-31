@@ -25,6 +25,7 @@
 * [Sales Path](code/sales_path.py)
 * [Largest Smaller BST Key](code/largest_smaller_bst_key.py)
 * [Shortest Word Edit Path](code/shortest_word_edit_path.py)
+* [Island Count](code/island_count.py)
 
 ### Sorting and Searching
 * [Shifted Array Search](code/shifted_array_search.py)
