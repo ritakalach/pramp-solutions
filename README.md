@@ -8,6 +8,7 @@
 * [Validate IP Address](code/validate_ip_address.py) 🌐📍 
 * [Array of Array Products](code/array_products.py)
 * [Busiest Time in The Mall](code/busiest_time_in_mall.py) ⌚🛍️
+* [Award Budget Cuts](code/award_budget_cuts.py) 💵✂️
 * [Array Index & Element Equality](code/arr_i_and_element_equality.py)
 * [Getting a Different Number](code/getting_diff_num.py)
 * [Sentence Reverse](code/sentence_reverse.py)
