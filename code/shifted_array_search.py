@@ -55,7 +55,6 @@ def shifted_arr_search(arr, num):
   
   return binary_search(arr, 0, pivot - 1, num)
 
-
 def find_pivot(arr, low, high):
   while low <= high:
     mid = low + (high - low) // 2
@@ -67,7 +66,6 @@ def find_pivot(arr, low, high):
       high = mid - 1
       
   return 0
-
 
 def binary_search(arr, low, high, num):
   while low <= high:
