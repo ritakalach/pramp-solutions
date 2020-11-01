@@ -63,5 +63,14 @@ def num_of_paths_to_dest(n):
 # Iterative
 # O(n^2) time
 # O(n) space
-
+def num_of_paths_to_dest(n):
+  prev = [1 for j in range(n)]
+  curr = [0 for j in range(n)]
   
+  for i in range(1, n):
+    for j in range(1, n):
+      if i <= j:
+        curr[j] = prev[j] + curr[j - 1]
+      prev = curr
+  
+  return prev[-1]
