@@ -28,6 +28,7 @@
 * [Island Count](code/island_count.py)
 
 ### Sorting and Searching
+* [Absolute Value Sort](code/absolute_value_sort.py)
 * [Shifted Array Search](code/shifted_array_search.py)
 * [Pancake Sort](code/pancake_sort.py) 🥞
 
