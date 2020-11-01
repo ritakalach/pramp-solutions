@@ -29,5 +29,26 @@ def swap(num1, num2):
     return num1 > num2
     
 
-# O(n) time
-# O(n) space
+# O(nlogn) the time complexity of sorting
+# O(n) the space typically used by compilers in their implementation of sorting operations
+def absSort(arr):
+	return sorted(arr, cmp = compare)
+
+def compare(a,b):
+  # Compare abs values
+  if abs(a) < abs(b):
+    return -1
+  elif abs(a) > abs(b):
+    return 1
+  # Compare signs
+  elif a < b:
+    return -1
+  elif a > b:
+    return 1
+  else:
+    return 0
+  
+
+# Using python
+def absSort(arr):
+	return sorted(arr, key = lambda x: (abs(x), x))
