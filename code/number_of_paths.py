@@ -35,7 +35,7 @@ def dfs(i, j, memo, n):
   
   number_of_paths = 0
   # Going up
-  if i < n - 1 and i >= j: # or i < j
+  if i < n - 1 and i < j:
     number_of_paths += dfs(i + 1, j, memo, n)
   # Going right  
   if j < n - 1:
