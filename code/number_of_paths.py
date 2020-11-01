@@ -18,6 +18,8 @@ output: 5
 
 """
 
+
+# Recursive
 # O(n^2) time
 # O(n^2) space
 def num_of_paths_to_dest(n):
@@ -43,4 +45,23 @@ def dfs(i, j, memo, n):
   return number_of_paths
   
   
+# Iterative
+# O(n^2) time
+# O(n^2) space
+def num_of_paths_to_dest(n):
+  dp = [[0 for j in range(n)] for i in range(n)]
+  dp[0] = [1 for j in range(n)]
+  
+  for i in range(1, n):
+    for j in range(1, n):
+      if i <= j:
+        dp[i][j] = dp[i - 1][j] + dp[i][j - 1] 
+  
+  return dp[-1][-1]
+
+
+# Iterative
+# O(n^2) time
+# O(n) space
+
   
