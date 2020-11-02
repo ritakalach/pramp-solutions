@@ -29,7 +29,7 @@
 
 ### Sorting and Searching
 * [Absolute Value Sort](code/absolute_value_sort.py)
-* K-Messed Array Sort
+* [K-Messed Array Sort](code/k_messed_arr_sort.py)
 * [Shifted Array Search](code/shifted_array_search.py)
 * [Pancake Sort](code/pancake_sort.py) 🥞
 
