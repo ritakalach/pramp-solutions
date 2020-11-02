@@ -19,13 +19,13 @@
 * [Time Planner](code/time_planner.py) ⏰📓
 * [Matrix Spiral Copy](code/matrix_spiral_copy.py) 🌀
 * [Minimum Window Substring](smallest_substr_all_chars.py)
-* [Array Quadruplet](code/array_quadruplet.py)
+* [Array Quadruplet](code/array_quadruplet.py) 4️⃣
 
 ### Trees and Graphs
 * [Sales Path](code/sales_path.py)
 * [Largest Smaller BST Key](code/largest_smaller_bst_key.py)
 * [Shortest Word Edit Path](code/shortest_word_edit_path.py)
-* [Island Count](code/island_count.py)
+* [Island Count](code/island_count.py) 🏝️
 
 ### Sorting and Searching
 * [Absolute Value Sort](code/absolute_value_sort.py)
@@ -35,9 +35,9 @@
 
 ### Recursion and DP
 * [Decode Variations](code/decode_variations.py)
-* [Flatten a Dictionary](code/flatten_dictionary.py)
+* [Flatten a Dictionary](code/flatten_dictionary.py) 📖
 * [Number of Paths](code/number_of_paths.py) 🚗
-* [Deletion Distance](code/deletion_distance.py)
+* [Deletion Distance](code/deletion_distance.py) ❌📏
 * [Basic Regex Parser](code/basic_regex_parser.py)
 * Diff Between Two Strings
 
