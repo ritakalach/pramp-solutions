@@ -29,6 +29,7 @@
 
 ### Sorting and Searching
 * [Absolute Value Sort](code/absolute_value_sort.py)
+* K-Messed Array Sort
 * [Shifted Array Search](code/shifted_array_search.py)
 * [Pancake Sort](code/pancake_sort.py) 🥞
 
@@ -38,6 +39,7 @@
 * [Number of Paths](code/number_of_paths.py) 🚗
 * [Deletion Distance](code/deletion_distance.py)
 * [Basic Regex Parser](code/basic_regex_parser.py)
+* Diff Between Two Strings
 
 ### Math
 * [Root of Number](code/root_of_number.py)
