@@ -26,7 +26,6 @@
 * BST Successor Search
 * [Largest Smaller BST Key](code/largest_smaller_bst_key.py)
 * [Shortest Word Edit Path](code/shortest_word_edit_path.py)
-* [Island Count](code/island_count.py) 🏝️
 
 ### Sorting and Searching
 * [Absolute Value Sort](code/absolute_value_sort.py)
@@ -35,6 +34,7 @@
 * [Pancake Sort](code/pancake_sort.py) 🥞
 
 ### Recursion and DP
+* [Island Count](code/island_count.py) 🏝️
 * [Decode Variations](code/decode_variations.py)
 * [Flatten a Dictionary](code/flatten_dictionary.py) 📖
 * [Number of Paths](code/number_of_paths.py) 🚗
