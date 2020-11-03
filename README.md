@@ -23,7 +23,7 @@
 
 ### Trees and Graphs
 * [Sales Path](code/sales_path.py)
-* BST Successor Search
+* [BST Successor Search](bst_successor_search.py)
 * [Largest Smaller BST Key](code/largest_smaller_bst_key.py)
 * [Shortest Word Edit Path](code/shortest_word_edit_path.py)
 
