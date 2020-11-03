@@ -24,6 +24,8 @@ output = node 20
 
 """
 
+# O(n) time
+# O(1) space
 
 # Starting at the root
 def find_in_order_successor(self, inputNode):
