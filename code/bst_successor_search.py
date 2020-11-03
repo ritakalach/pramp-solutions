@@ -24,6 +24,8 @@ output = node 20
 
 """
 
+
+# Starting at the root
 def find_in_order_successor(self, inputNode):
     successor = None
     node = self.root
@@ -36,3 +38,44 @@ def find_in_order_successor(self, inputNode):
         node = node.right 
         
     return successor
+
+
+# Starting at the node
+  def find_in_order_successor(self, inputNode):
+    curr_node = inputNode
+    
+    if curr_node.right:
+      # Return left-most node in the right subtree
+      curr_node = curr_node.right
+      while curr_node.left:
+        curr_node = curr_node.left
+      return curr_node
+    
+    else:
+      # Return first ancestor whose key is larger than inputNode's key
+      while curr_node.parent:
+        if curr_node.parent.key < curr_node.key:
+          curr_node = curr_node.parent
+        else:
+          return curr_node.parent
+        
+    # Succesor doesn't exist
+    return None
+
+
+# Starting at the node, modular
+  def find_in_order_successor(self, inputNode):
+    if inputNode.right:
+      return self.find_min_key(inputNode.right)
+    
+    ancestor = inputNode.parent
+    child = inputNode   
+    while ancestor and child == ancestor.right:
+      child = ancestor
+      ancestor = child.parent     
+    return ancestor
+  
+  def find_min_key(self, inputNode):
+    while inputNode.left:
+      inputNode = inputNode.left
+    return inputNode
