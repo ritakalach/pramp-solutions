@@ -18,7 +18,7 @@
 * [Word Count Engine](code/word_count_engine.py)
 * [Time Planner](code/time_planner.py) ⏰📓
 * [Matrix Spiral Copy](code/matrix_spiral_copy.py) 🌀
-* [Minimum Window Substring](smallest_substr_all_chars.py)
+* [Smallest Substring of All Characters](code/smallest_substr_all_chars.py)
 * [Array Quadruplet](code/array_quadruplet.py) 4️⃣
 
 ### Trees and Graphs
