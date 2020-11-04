@@ -40,7 +40,7 @@
 * [Number of Paths](code/number_of_paths.py) 🚗
 * [Deletion Distance](code/deletion_distance.py) ❌📏
 * [Basic Regex Parser](code/basic_regex_parser.py)
-* Diff Between Two Strings
+* [Diff Between Two Strings](diff_btw_two_strs.py)
 
 ### Math
 * [Root of Number](code/root_of_number.py)
