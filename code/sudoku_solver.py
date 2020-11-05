@@ -24,9 +24,10 @@ If the function succeeds in solving the sudoku board, it’ll return true (false
 # O(1) space
 def sudoku_solve(board):
   # Find an empty cell
-  i, j = find_empty_cell(board)
-  if i is None:
+  empty_cell_loc = find_empty_cell(board)
+  if not empty_cell_loc:
     return True # no empty cells means we solved the sudoku
+  i, j = empty_cell_loc
   
   # Fill empty cell with a number between 1-9
   for guess in range(1, 10):
@@ -48,7 +49,7 @@ def find_empty_cell(board):
     for j in range(9):
       if board[i][j] == ".":
         return i, j
-  return None, None
+  return None
 
 
 def is_valid(board, guess, i, j):
