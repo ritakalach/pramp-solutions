@@ -38,6 +38,7 @@
 * [Decode Variations](code/decode_variations.py)
 * [Flatten a Dictionary](code/flatten_dictionary.py) 📖
 * [Number of Paths](code/number_of_paths.py) 🚗
+* [Sudoku Solver](code/sudoku_solver.py)
 * [Deletion Distance](code/deletion_distance.py) ❌📏
 * [Basic Regex Parser](code/basic_regex_parser.py)
 * [Diff Between Two Strings](code/diff_btw_two_strs.py)
