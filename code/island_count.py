@@ -59,11 +59,10 @@ def dfs(matrix, x, y, m, n):
   stack = [[x, y]]
   while stack:
     i, j = stack.pop()
-    if i < 0 or i >= m or j < 0 or j >= n or matrix[i][j] != 1:
-      continue
-    else:
+    if i >= 0 and i < m and j >= 0 and j < n and matrix[i][j] == 1:
       matrix[i][j] = -1
       stack.append([i - 1, j])
       stack.append([i + 1, j])
       stack.append([i, j - 1])
       stack.append([i, j + 1])
+  return
