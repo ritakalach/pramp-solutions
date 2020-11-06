@@ -3,6 +3,7 @@
 
 ### Array and Strings
 * [Bracket Match](code/bracket_match.py)
+* [Move Zeros To End](code/move_zeros.py)
 * [Find The Duplicates](code/find_duplicates.py)
 * [Drone Flight Planner](code/drone_flight_planner.py) ✈️
 * [Validate IP Address](code/validate_ip_address.py) 🌐📍 
