@@ -20,26 +20,6 @@ explanation: There are 3 messages that encode to '1262': 'AZB', 'ABFB', and 'LFB
 # O(n) time
 # O(n) space
 def decodeVariations(S):
-  def dfs(i):
-    if i == len(S):
-      return 1
-    if i in memo:
-      return memo[i]
-    
-    count = 0
-    if 1 <= int(S[i]) <= 9:
-      count += dfs(i+1)
-    if 10 <= int(S[i:i+2]) <= 26:
-      count += dfs(i+2)
-    memo[i] = count
-    return count
-    
-  memo = {}
-  return dfs(0)
-
-
-# Also recursive (maybe cleaner)
-def decodeVariations(S):
   return decode_variations_dfs(S, 0, {})
 
 def decode_variations_dfs(S, i, memo):
@@ -49,7 +29,7 @@ def decode_variations_dfs(S, i, memo):
     return memo[i]
   
   count = 0
-  if 1 <= int(S[i]) <= 9:
+  if S[i] != "0":
     count += decode_variations_dfs(S, i+1, memo) 
   if 10 <= int(S[i:i+2]) <= 26:
     count += decode_variations_dfs(S, i+2, memo)
