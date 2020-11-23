@@ -41,7 +41,7 @@ def is_valid_num(num):
   
   # Check that each character in num is a digit 0-9
   for digit in num:
-    if digit < '0' or digit > '9':
+    if digit < '0' or digit > '9': # if not digit.isdigit():
       return False
   
   # Check for leading zeros
