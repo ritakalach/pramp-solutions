@@ -95,3 +95,22 @@ def decodeVariations(S):
     
   return prev
         
+
+  
+# This will work IRL
+# but doesn't pass test cases because memo gets cached
+def decodeVariations(string, i=0, memo={}):
+  if i in memo:
+    return memo[i]
+  if i == len(string):
+    return 1
+  
+  count = 0
+  
+  if string[i] != "0":
+    count += decodeVariations(string, i + 1, memo)
+  if 10 <= int(string[i:i+2]) <= 26:
+    count += decodeVariations(string, i + 2, memo)
+  
+  memo[i] = count
+  return count
