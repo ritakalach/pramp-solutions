@@ -44,3 +44,20 @@ def flat_dict_recurse(nested_dict, flat_dict, path=""):
       flat_dict[updated_path] = value
     else:
       flat_dict_recurse(value, flat_dict, updated_path)
+
+
+# Another way of solving the problem
+def flatten_dictionary(nested_dict):
+  if not isinstance(nested_dict, dict):
+    return {"": nested_dict}
+  
+  flat_dict = {}
+  
+  for key, value in nested_dict.items():
+    flat_items = flatten_dictionary(value)
+    for key_of_flat_item, value_of_flat_item in flat_items.items():
+      add_dot = 1 if key and key_of_flat_item else 0
+      concat_key_of_flat_item = key + ("." * add_dot) + key_of_flat_item
+      flat_dict[concat_key_of_flat_item] = value_of_flat_item
+    
+  return flat_dict
