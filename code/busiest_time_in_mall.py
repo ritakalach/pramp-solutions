@@ -44,3 +44,10 @@ def find_busiest_period(data):
     # Check if there are more data points with same timestamp
     if i < n - 1 and curr_timestamp == data[i + 1][0]:
       continue
+    
+    # Update max
+    if count > max_count:
+      max_count = count
+      timestamp = curr_timestamp
+  
+  return timestamp
