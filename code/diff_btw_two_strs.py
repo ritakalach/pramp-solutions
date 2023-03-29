@@ -4,7 +4,7 @@ Diff Between Two Strings
 Given two strings of uppercase letters source and target, list (in string form) a sequence of edits to convert from source to target 
 that uses the least edits possible.
 
-For example, with strings source = "ABCDEFG", and target = "ABDFFGH" we might return: ["A", "B", "-C", "D", "-E", "F", "+F", "G", "+H"
+For example, with strings source = "ABCDEFG", and target = "ABDFFGH" we might return: ["A", "B", "-C", "D", "-E", "F", "+F", "G", "+H"]
 
 More formally, for each character C in source, we will either write the token C, which does not count as an edit; 
 or write the token -C, which counts as an edit.
